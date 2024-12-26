@@ -1,8 +1,8 @@
+using memory_game_backend.Models.Entities;
+
 namespace memory_game_backend.Data.Databases;
 
 using Microsoft.EntityFrameworkCore;
-
-using memory_game_backend.Models.Entities;
 
 public class AppDbContext : DbContext
 {
