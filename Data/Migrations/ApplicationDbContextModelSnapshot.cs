@@ -19,7 +19,7 @@ namespace memory_game_backend.Data.Migrations
                 .HasAnnotation("ProductVersion", "8.0.11")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-            modelBuilder.Entity("the_memory_game_asp_dotnet_core.Models.Entities.Score", b =>
+            modelBuilder.Entity("memory_game_backend.Models.Entities.Score", b =>
                 {
                     b.Property<Guid>("ScoreId")
                         .ValueGeneratedOnAdd()
@@ -47,7 +47,7 @@ namespace memory_game_backend.Data.Migrations
                     b.ToTable("Scores");
                 });
 
-            modelBuilder.Entity("the_memory_game_asp_dotnet_core.Models.Entities.User", b =>
+            modelBuilder.Entity("memory_game_backend.Models.Entities.User", b =>
                 {
                     b.Property<Guid>("UserId")
                         .ValueGeneratedOnAdd()
@@ -78,9 +78,9 @@ namespace memory_game_backend.Data.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("the_memory_game_asp_dotnet_core.Models.Entities.Score", b =>
+            modelBuilder.Entity("memory_game_backend.Models.Entities.Score", b =>
                 {
-                    b.HasOne("the_memory_game_asp_dotnet_core.Models.Entities.User", "User")
+                    b.HasOne("memory_game_backend.Models.Entities.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
